@@ -1,4 +1,6 @@
+import Phaser from 'phaser';
 import Entity from './entities';
+import config from '../config/config';
 
 class Player extends Entity {
   constructor(scene, x, y, key) {
@@ -21,6 +23,12 @@ class Player extends Entity {
 
   moveRight() {
     this.body.velocity.x = this.getData('speed');
+  }
+
+  update() {
+    this.body.setVelocity(0, 0);
+    this.x = Phaser.Math.Clamp(this.x, 0, config.width);
+    this.y = Phaser.Math.Clamp(this.y, 0, config.height);
   }
 }
 
