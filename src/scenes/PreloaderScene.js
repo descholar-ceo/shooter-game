@@ -14,6 +14,9 @@ import sprEnemy2 from '../assets/sprEnemy2.png';
 import sprLaserEnemy0 from '../assets/sprLaserEnemy0.png';
 import sprLaserPlayer from '../assets/sprLaserPlayer.png';
 import sprPlayer from '../assets/sprPlayer.png';
+import sndLaser from '../assets/sndLaser.wav';
+import sndExplode0 from '../assets/sndExplode0.wav';
+import sndExplode1 from '../assets/sndExplode1.wav';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -109,6 +112,9 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('sprLaserEnemy0', sprLaserEnemy0);
     this.load.image('sprLaserPlayer', sprLaserPlayer);
     this.load.spritesheet('sprPlayer', sprPlayer, { frameWidth: 16, frameHeight: 16 });
+    this.load.audio('sndExplode0', sndExplode0);
+    this.load.audio('sndExplode1', sndExplode1);
+    this.load.audio('sndLaser', sndLaser);
   }
 
   ready() {
