@@ -18,6 +18,14 @@ class GunShip extends Entity {
       loop: true,
     });
   }
+
+  onDestroy() {
+    if (this.shootTimer !== undefined) {
+      if (this.shootTimer) {
+        this.shootTimer.remove(false);
+      }
+    }
+  }
 }
 
 export default GunShip;

@@ -16,7 +16,7 @@ class GameScene extends Phaser.Scene {
     this.enemyLasers = this.add.group();
     this.playerLasers = this.add.group();
     this.time.addEvent({
-      delay: 100,
+      delay: 1000,
       callback() {
         const enemy = new GunShip(this, Phaser.Math.Between(0, config.width), 0);
         this.enemies.add(enemy);
