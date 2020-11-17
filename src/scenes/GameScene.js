@@ -5,20 +5,11 @@ import config from '../config/config';
 
 class GameScene extends Phaser.Scene {
   constructor() {
-    super({ key: 'Game' });
+    super('Game');
   }
-
-  // preload() {
-  //   // this.load.image('logo', logoImg);
-  // }
 
   create() {
     this.player = new Player(this, config.width * 0.5, config.height * 0.5, 'sprPlayer');
-    // this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
-    // this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
-    // this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-    // this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    // this.keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
   }
 
   update() {
