@@ -6,8 +6,6 @@ export default class OptionsScene extends Phaser.Scene {
     super('Options');
   }
 
-  // preload() {}
-
   create() {
     this.model = this.sys.game.globals.model;
 
@@ -55,6 +53,4 @@ export default class OptionsScene extends Phaser.Scene {
       this.soundButton.setTexture('checkBox');
     }
   }
-
-  // update() {}
 }

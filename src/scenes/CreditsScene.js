@@ -7,8 +7,6 @@ export default class CreditsScene extends Phaser.Scene {
     super('Credits');
   }
 
-  // preload() {}
-
   create() {
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '42px', fill: '#fff' });
     this.madeByText = this.add.text(0, 0, 'Created by: descholar', { fontSize: '32px', fill: '#fff' });
@@ -42,6 +40,4 @@ export default class CreditsScene extends Phaser.Scene {
       },
     });
   }
-
-  // update() {}
 }
