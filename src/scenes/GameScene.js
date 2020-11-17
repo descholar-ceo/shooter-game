@@ -10,21 +10,21 @@ class GameScene extends Phaser.Scene {
 
   create() {
     this.player = new Player(this, config.width * 0.5, config.height * 0.5, 'sprPlayer');
+    this.cursors = this.input.keyboard.createCursorKeys();
   }
 
   update() {
-    const cursors = this.input.keyboard.createCursorKeys();
     this.player.update();
 
-    if (cursors.up.isDown) {
+    if (this.cursors.up.isDown) {
       this.player.moveUp();
-    } else if (cursors.down.isDown) {
+    } else if (this.cursors.down.isDown) {
       this.player.moveDown();
     }
 
-    if (cursors.left.isDown) {
+    if (this.cursors.left.isDown) {
       this.player.moveLeft();
-    } else if (cursors.right.isDown) {
+    } else if (this.cursors.right.isDown) {
       this.player.moveRight();
     }
   }
