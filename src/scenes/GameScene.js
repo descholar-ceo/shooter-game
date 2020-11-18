@@ -20,8 +20,6 @@ class GameScene extends Phaser.Scene {
     this.time.addEvent({
       delay: 1000,
       callback() {
-        // const enemy = new GunShip(this, Phaser.Math.Between(0, config.width), 0);
-        // this.enemies.add(enemy);
         let enemy = null;
 
         if (Phaser.Math.Between(0, 10) >= 3) {
