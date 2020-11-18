@@ -23,25 +23,13 @@ class GameScene extends Phaser.Scene {
         let enemy = null;
 
         if (Phaser.Math.Between(0, 10) >= 3) {
-          enemy = new GunShip(
-            this,
-            Phaser.Math.Between(0, this.game.config.width),
-            0,
-          );
+          enemy = new GunShip(this, Phaser.Math.Between(0, config.width), 0);
         } else if (Phaser.Math.Between(0, 10) >= 5) {
           if (this.getEnemiesByType('ChaserShip').length < 5) {
-            enemy = new ChaserShip(
-              this,
-              Phaser.Math.Between(0, this.game.config.width),
-              0,
-            );
+            enemy = new ChaserShip(this, Phaser.Math.Between(0, config.width), 0);
           }
         } else {
-          enemy = new CarrierShip(
-            this,
-            Phaser.Math.Between(0, this.game.config.width),
-            0,
-          );
+          enemy = new CarrierShip(this, Phaser.Math.Between(0, config.width), 0);
         }
 
         if (enemy !== null) {
