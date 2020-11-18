@@ -40,7 +40,7 @@ class Player extends Entity {
         const laser = new PlayerLaser(this.scene, this.x, this.y);
         this.scene.playerLasers.add(laser);
 
-        this.scene.sfx.laser.play(); // play the laser sound effect
+        // this.scene.sfx.laser.play(); // play the laser sound effect
         this.setData('timerShootTick', 0);
       }
     }
