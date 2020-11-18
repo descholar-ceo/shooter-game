@@ -4,7 +4,6 @@ import GunShip from '../entities/gunShip';
 import ChaserShip from '../entities/chaserShip';
 import CarrierShip from '../entities/carrierShip';
 import config from '../config/config';
-// import logoImg from '../assets/logo.png';
 
 class GameScene extends Phaser.Scene {
   constructor() {
@@ -39,6 +38,23 @@ class GameScene extends Phaser.Scene {
       },
       callbackScope: this,
       loop: true,
+    });
+    this.physics.add.collider(this.playerLasers, this.enemies, (playerLaser, enemy) => {
+      if (enemy) {
+        if (enemy.onDestroy !== undefined) {
+          enemy.onDestroy();
+        }
+
+        enemy.explode(true);
+        playerLaser.destroy();
+      }
+    });
+    this.physics.add.overlap(this.player, this.enemyLasers, (player, laser) => {
+      if (!player.getData('isDead')
+          && !laser.getData('isDead')) {
+        player.explode(false);
+        laser.destroy();
+      }
     });
   }
 
