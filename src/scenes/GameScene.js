@@ -56,6 +56,12 @@ class GameScene extends Phaser.Scene {
     } else if (this.cursors.right.isDown) {
       this.player.moveRight();
     }
+
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
+      const enemy = this.enemies.getChildren()[i];
+
+      enemy.update();
+    }
   }
 
   getEnemiesByType(type) {
