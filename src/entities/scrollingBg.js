@@ -3,6 +3,7 @@ class ScrollingBackground {
     this.scene = scene;
     this.key = key;
     this.velocityY = velocityY;
+    this.layers = this.scene.add.group();
   }
 }
 
