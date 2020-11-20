@@ -56,7 +56,7 @@ class GameScene extends Phaser.Scene {
       if (!player.getData('isDead') && !laser.getData('isDead')) {
         player.explode(false);
         laser.destroy();
-        this.scene.start('GameOver');
+        this.scene.start('GameOverScene');
       }
     });
   }
