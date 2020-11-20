@@ -17,6 +17,7 @@ class GameScene extends Phaser.Scene {
       const bg = new ScrollingBackground(this, 'sprBg0', i * 10);
       this.backgrounds.push(bg);
     }
+    this.score = 0;
     this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#ffffff' });
     this.player = new Player(this, config.width * 0.5, config.height * 0.5, 'sprPlayer');
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -53,6 +54,8 @@ class GameScene extends Phaser.Scene {
         }
 
         enemy.explode(true);
+        this.score += 10;
+        this.scoreText.setText(`Score: ${this.score}`);
         playerLaser.destroy();
       }
     });
