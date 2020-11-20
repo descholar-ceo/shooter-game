@@ -3,6 +3,9 @@ import Phaser from 'phaser';
 export default {
   type: Phaser.AUTO,
   parent: 'phaser-example',
+  dom: {
+    createContainer: true,
+  },
   physics: {
     default: 'arcade',
     arcade: {
