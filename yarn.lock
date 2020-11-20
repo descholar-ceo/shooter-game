@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@azerion/phaser-input@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@azerion/phaser-input/-/phaser-input-2.0.5.tgz#4bb77ac34e7faaff6de4d92a4fe9596b2a302f34"
-  integrity sha512-fxA2TGFWAtC9r1FU9szO14adsqIB/8NreFznPEQJhqnNQu6gUTQnbC6E/iTl1QWsaDpKzoagMk5HGjqH+1ntcw==
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz"
