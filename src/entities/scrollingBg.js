@@ -8,7 +8,7 @@ class ScrollingBackground {
     this.layers = this.scene.add.group();
   }
 
-  createLayers = () => {
+  createLayers() {
     for (let i = 0; i < 2; i += 1) {
       // creating two backgrounds will allow a continuous scroll
       const layer = this.scene.add.sprite(0, 0, this.key);
