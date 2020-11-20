@@ -10,7 +10,7 @@ export default class NamesScene extends Phaser.Scene {
   create() {
     this.titleText = this.add.text(
       (config.width / 8), (config.height / 2) - 200,
-      'Welcome to SpaceShooter game\n=========', { fontSize: '42px', fill: '#ffffff' },
+      'Welcome to SpaceShooter game', { fontSize: '42px', fill: '#ffffff' },
     );
     this.scoreText = this.add.text(
       (config.width / 6), (config.height / 2) - 50,
