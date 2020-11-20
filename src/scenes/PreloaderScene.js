@@ -94,7 +94,7 @@ export default class PreloaderScene extends Phaser.Scene {
       assetText.destroy();
     });
 
-    this.timeEvent = this.time.delayedCall(3000, this.ready, [], this);
+    this.timeEvent = this.time.delayedCall(1000, this.ready, [], this);
 
     // load assets needed
     this.load.image('blueButton1', blueButton1);
@@ -145,10 +145,10 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   ready() {
-    this.scene.start('Title');
+    this.scene.start('NamesScene');
     this.readyCount += 1;
     if (this.readyCount === 1) {
-      this.scene.start('Title');
+      this.scene.start('NamesScene');
     }
   }
 }
