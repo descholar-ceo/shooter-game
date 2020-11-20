@@ -10,9 +10,13 @@ class GameScene extends Phaser.Scene {
     super('Game');
   }
 
+  preload() {
+    this.sys.game.globals.score = 0;
+  }
+
   create() {
     this.model = this.sys.game.globals.model;
-    this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#ffffff' });
+    this.scoreText = this.add.text(16, 16, `Score: ${this.sys.game.globals.score}`, { fontSize: '32px', fill: '#ffffff' });
     this.player = new Player(this, config.width * 0.5, config.height * 0.5, 'sprPlayer');
     this.cursors = this.input.keyboard.createCursorKeys();
     this.enemies = this.add.group();
@@ -57,10 +61,6 @@ class GameScene extends Phaser.Scene {
       if (!player.getData('isDead') && !laser.getData('isDead')) {
         player.explode(false);
         laser.destroy();
-        if (this.model.bgMusicPlaying === true) {
-          this.sys.game.globals.bgMusic.stop();
-          this.model.bgMusicPlaying = false;
-        }
         this.scene.start('GameOverScene');
       }
     });
