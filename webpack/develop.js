@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -29,6 +30,13 @@ module.exports = {
     new CleanWebpackPlugin({
       root: path.resolve(__dirname, '../'),
     }),
+    new CopyWebpackPlugin(
+      [
+        {
+          from: path.resolve(__dirname, 'names-form.html'),
+          to: path.resolve(__dirname, 'dist'),
+        }],
+    ),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true),

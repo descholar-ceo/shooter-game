@@ -8,6 +8,7 @@ export default class BootScene extends Phaser.Scene {
 
   preload() {
     this.load.image('companyLogo', companyLogo);
+    this.load.html('namesForm', './names-form.html');
   }
 
   create() {
