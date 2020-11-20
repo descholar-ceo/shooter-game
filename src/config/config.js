@@ -9,9 +9,9 @@ export default {
       gravity: { x: 0, y: 0 },
     },
   },
-  backgroundColor: 0x000000,
-  width: 600,
-  height: 650,
+  backgroundColor: 0x000,
+  width: 800,
+  height: 600,
   pixelArt: true,
   roundPixels: true,
 };
