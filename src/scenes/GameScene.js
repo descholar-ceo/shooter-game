@@ -11,7 +11,6 @@ class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.score = 0;
     this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#ffffff' });
     this.player = new Player(this, config.width * 0.5, config.height * 0.5, 'sprPlayer');
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -48,14 +47,13 @@ class GameScene extends Phaser.Scene {
         }
 
         enemy.explode(true);
-        this.score += 10;
-        this.scoreText.setText(`Score: ${this.score}`);
+        this.sys.game.globals.score += 10;
+        this.scoreText.setText(`Score: ${this.sys.game.globals.score}`);
         playerLaser.destroy();
       }
     });
     this.physics.add.overlap(this.player, this.enemyLasers, (player, laser) => {
-      if (!player.getData('isDead')
-          && !laser.getData('isDead')) {
+      if (!player.getData('isDead') && !laser.getData('isDead')) {
         player.explode(false);
         laser.destroy();
       }
