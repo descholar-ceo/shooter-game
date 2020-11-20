@@ -10,7 +10,7 @@ export default {
     },
   },
   backgroundColor: 0x000,
-  width: 800,
+  width: 900,
   height: 600,
   pixelArt: true,
   roundPixels: true,
