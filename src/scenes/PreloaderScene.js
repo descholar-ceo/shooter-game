@@ -17,7 +17,6 @@ import sprPlayer from '../assets/sprPlayer.png';
 import sndLaser from '../assets/sndLaser.wav';
 import sndExplode0 from '../assets/sndExplode0.wav';
 import sndExplode1 from '../assets/sndExplode1.wav';
-import ScrollingBackground from '../entities/scrollingBg';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -29,9 +28,6 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    // add logo
-    this.add.image(400, 200, 'companyLogo');
-
     // add loading bar
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
@@ -144,11 +140,6 @@ export default class PreloaderScene extends Phaser.Scene {
       frameRate: 20,
       repeat: -1,
     });
-    this.backgrounds = [];
-    for (let i = 0; i < 5; i += 1) { // create five scrolling backgrounds
-      const bg = new ScrollingBackground(this, 'sprBg0', i * 10);
-      this.backgrounds.push(bg);
-    }
   }
 
   ready() {
