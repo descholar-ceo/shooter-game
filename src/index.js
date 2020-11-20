@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import PhaserInput from '@azerion/phaser-input/build/phaser-input';
 import Config from './config/config';
 import GameScene from './scenes/GameScene';
 import BootScene from './scenes/BootScene';
@@ -27,4 +28,5 @@ class Game extends Phaser.Game {
   }
 }
 
-window.game = new Game();
+const game = new Game();
+game.plugins.add(PhaserInput.Plugin);

@@ -16,7 +16,6 @@ export default class NamesScene extends Phaser.Scene {
       (config.width / 6), (config.height / 2) - 50,
       'Enter your name: ', { fontSize: '32px', fill: '#ffffff' },
     );
-    this.add.dom('namesForm');
     this.restartButton = new Button(
       this, (config.width / 2) + 50, (config.height / 2) + 50, 'blueButton1', 'blueButton2', 'Start game', 'Title',
     );
