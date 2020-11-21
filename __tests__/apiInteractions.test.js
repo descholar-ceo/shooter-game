@@ -1,4 +1,4 @@
-import { savePlayerScore, sortScores, retrievePlayerScore } from '../src/helpers/apiInteractions';
+import { savePlayerScore, retrievePlayerScore } from '../src/helpers/apiInteractions';
 
 describe('Test apiInteractions', () => {
   it('Will saveScore to the leaderboardAPI', async (done) => {
