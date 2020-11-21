@@ -4,9 +4,10 @@ const baseApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/a
 const shooterGamApiKey = 'KJOL8sVVdDaV9mb3w7Xx';
 
 export const savePlayerScore = async (playerName, score) => {
-  await axios.post(`${baseApiUrl}games/${shooterGamApiKey}/scores/`, { user: playerName, score })
+  const resultToReturn = await axios.post(`${baseApiUrl}games/${shooterGamApiKey}/scores/`, { user: playerName, score })
     .then(result => result.data)
     .catch(err => err.response.data);
+  return resultToReturn;
 };
 
 export const sortAndSaveScores = (responseArr) => {
