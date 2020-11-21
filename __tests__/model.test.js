@@ -12,4 +12,9 @@ describe('Test model', () => {
     expect(model.soundOn).toEqual(false);
     done();
   });
+  it('Will setup the bgMusicPlaying to on', (done) => {
+    model.bgMusicPlaying = true;
+    expect(model.bgMusicPlaying).toEqual(true);
+    done();
+  });
 });
