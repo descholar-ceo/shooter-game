@@ -1,8 +1,9 @@
 import { savePlayerScore, sortAndSaveScores, retrievePlayerScore } from '../src/helpers/apiInteractions';
 
-describe('Test apiInteractions', () => {
-  it('Will validate the validity of the name', (done) => {
-    expect(isNamesValid('nezago')).toEqual(true);
+describe('Test apiInteractions', async () => {
+  it('Will saveScore to the leaderboardAPI', (done) => {
+    const res = await savePlayerScore('test', 10)
+    expect().toEqual(true);
     done();
   });
   it('Will validate the invalidity of an empty name', (done) => {
