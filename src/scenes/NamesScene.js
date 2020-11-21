@@ -25,13 +25,9 @@ export default class NamesScene extends Phaser.Scene {
         if (isNamesValid(enteredNames)) {
           this.sys.game.globals.playerNames = enteredNames;
           this.namesForm.removeListener('click');
-          this.namesForm.setVisible(false);
           this.scene.start('Title');
         } else {
-          this.add.text(
-            (config.width / 4), (config.height / 2) + 200,
-            'Your name is required', { fontSize: '32px', fill: '#ffffff' },
-          );
+          this.enterNamesText.setText('Your name is required');
         }
       }
     });
