@@ -3,11 +3,7 @@
 
 name: Test with jest
 
-on:
-  push:
-    branches: [ add-shooter-logic ]
-  pull_request:
-    branches: [ add-shooter-logic ]
+on: pull_request
 
 jobs:
   build:
@@ -16,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
