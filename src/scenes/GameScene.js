@@ -51,7 +51,9 @@ class GameScene extends Phaser.Scene {
         if (enemy.onDestroy !== undefined) {
           enemy.onDestroy();
         }
-        this.sndExplode.play();
+        if (this.model.soundOn === true) {
+          this.sndExplode.play();
+        }
         enemy.explode(true);
         this.sys.game.globals.score += 10;
         this.scoreText.setText(`Score: ${this.sys.game.globals.score}`);
