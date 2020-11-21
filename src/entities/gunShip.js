@@ -5,7 +5,6 @@ import EnemyLaser from './enemyLaser';
 class GunShip extends Entity {
   constructor(scene, x, y) {
     super(scene, x, y, 'sprEnemy0', 'GunShip');
-    // this.play('sprEnemy0');
     this.body.velocity.y = Phaser.Math.Between(50, 100);
     this.shootTimer = this.scene.time.addEvent({
       delay: 1000,

@@ -67,6 +67,13 @@ class GameScene extends Phaser.Scene {
         this.scene.start('GameOverScene');
       }
     });
+    this.physics.add.overlap(this.player, this.enemies, (player, enemy) => {
+      if (!player.getData('isDead') && !enemy.getData('isDead')) {
+        player.explode(false);
+        enemy.destroy();
+        this.scene.start('GameOverScene');
+      }
+    });
   }
 
   update() {
