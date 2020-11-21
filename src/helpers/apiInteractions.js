@@ -23,19 +23,12 @@ export const sortAndSaveScores = (responseArr) => {
   for (let i = 0; i < 10; i += 1) {
     topTenPlayers.push(newFormattedScoresArr[i]);
   }
-  localStorage.setItem('topTenPlayers', JSON.stringify(topTenPlayers));
   return topTenPlayers;
 };
 
 export const retrievePlayerScore = async () => {
-  let resultToReturn;
-  await axios.get(`${baseApiUrl}games/${shooterGamApiKey}/scores/`)
-    .then(res => {
-      sortAndSaveScores(res);
-    })
-    .catch(err => {
-      resultToReturn = err;
-    });
-
+  const resultToReturn = await axios.get(`${baseApiUrl}games/${shooterGamApiKey}/scores/`)
+    .then(res => sortAndSaveScores(res))
+    .catch(err => err);
   return resultToReturn;
 };
