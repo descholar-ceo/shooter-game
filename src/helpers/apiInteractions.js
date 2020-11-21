@@ -6,10 +6,10 @@ const shooterGamApiKey = 'KJOL8sVVdDaV9mb3w7Xx';
 export const savePlayerScore = async (playerName, score) => {
   await axios.post(`${baseApiUrl}games/${shooterGamApiKey}/scores/`, { user: playerName, score })
     .then(result => {
-      console.log(result);
+      return result.data
     })
     .catch(err => {
-      console.log(err);
+      return err.response.data;
     });
 };
 
