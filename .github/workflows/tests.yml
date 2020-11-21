@@ -5,9 +5,9 @@ name: Test with jest
 
 on:
   push:
-    branches: [ feature/add-tests ]
+    branches: [ feature/add-shooter-logic ]
   pull_request:
-    branches: [ feature/add-tests ]
+    branches: [ feature/add-shooter-logic ]
 
 jobs:
   build:
