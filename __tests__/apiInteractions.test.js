@@ -7,4 +7,11 @@ describe('Test apiInteractions', () => {
     expect(res.result).toEqual('Leaderboard score created correctly.');
     done();
   });
+  it('Will not saveScore to the leaderboardAPI because score is not provided', async (done) => {
+    const res = await savePlayerScore('test');
+    // expect(res).toHaveProperty('result');
+    // expect(res.result).toEqual('Leaderboard score created correctly.');
+    console.log(res);
+    done();
+  });
 });
