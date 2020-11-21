@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import config from '../config/config';
+import isNamesValid from '../helpers/validations';
 
 export default class NamesScene extends Phaser.Scene {
   constructor() {
@@ -15,6 +16,19 @@ export default class NamesScene extends Phaser.Scene {
       (config.width / 4), (config.height / 2) - 50,
       'Enter your name: ', { fontSize: '32px', fill: '#ffffff' },
     );
-    this.add.dom((config.width / 2), (config.height / 2) + 50).createFromCache('namesForm');
+    this.namesForm = this.add.dom((config.width / 2), (config.height / 2) + 50).createFromCache('namesForm');
+    this.namesForm.addListener('click');
+    this.namesForm.on('click', event => {
+      const clickedElement = event.target;
+      if (clickedElement.name === 'continueBtn') {
+        const enteredNames = document.querySelector('#name').value;
+        if (isNamesValid(enteredNames)) {
+          this.sys.game.globals.playerNames = enteredNames;
+          this.namesForm.removeListener('click');
+          this.namesForm.setVisible(false);
+          this.scene.start('Title');
+        }
+      }
+    });
   }
 }
