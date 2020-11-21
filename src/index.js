@@ -8,6 +8,7 @@ import OptionsScene from './scenes/OptionsScene';
 import CreditsScene from './scenes/CreditsScene';
 import GameOverScene from './scenes/GameOverScene';
 import NamesScene from './scenes/NamesScene';
+import LeaderboardScene from './scenes/LeaderboardScene';
 import Model from './model';
 
 class Game extends Phaser.Game {
@@ -15,7 +16,7 @@ class Game extends Phaser.Game {
     super(Config);
     const model = new Model();
     this.globals = {
-      model, bgMusic: null, score: 0, playerNames: '',
+      model, bgMusic: null, score: 0, playerNames: '', savedScoreResult: null,
     };
     this.scene.add('Boot', BootScene);
     this.scene.add('Preloader', PreloaderScene);
@@ -23,6 +24,7 @@ class Game extends Phaser.Game {
     this.scene.add('Title', TitleScene);
     this.scene.add('Options', OptionsScene);
     this.scene.add('Credits', CreditsScene);
+    this.scene.add('LeaderboardScene', LeaderboardScene);
     this.scene.add('Game', GameScene);
     this.scene.add('GameOverScene', GameOverScene);
     this.scene.start('Boot');
