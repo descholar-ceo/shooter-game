@@ -7,7 +7,7 @@
     "build": "webpack --config webpack/production.js ",
     "dev": "webpack-dev-server --config webpack/develop.js --open",
     "eslint-f": "npx eslint . --fix",
-    "test": "jest"
+    "test": "jest --testTimeout=10000 --verbose"
   },
   "repository": {
     "type": "git",

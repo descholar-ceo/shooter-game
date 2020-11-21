@@ -33,7 +33,7 @@ export const retrievePlayerScore = async () => {
       sortAndSaveScores(res);
     })
     .catch(err => {
-      resultToReturn = err.response.data;
+      resultToReturn = err;
     });
 
   return resultToReturn;
