@@ -61,6 +61,7 @@
       "src/*.js",
       "src/**/*.js",
       "!src/entities/",
+      "!src/index.js",
       "!rc/objects/",
       "!src/config/",
       "!src/assets/",
