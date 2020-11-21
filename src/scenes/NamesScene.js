@@ -12,7 +12,7 @@ export default class NamesScene extends Phaser.Scene {
       (config.width / 8), (config.height / 2) - 200,
       'Welcome to SpaceShooter game', { fontSize: '42px', fill: '#ffffff' },
     );
-    this.scoreText = this.add.text(
+    this.enterNamesText = this.add.text(
       (config.width / 4), (config.height / 2) - 50,
       'Enter your name: ', { fontSize: '32px', fill: '#ffffff' },
     );
@@ -27,6 +27,11 @@ export default class NamesScene extends Phaser.Scene {
           this.namesForm.removeListener('click');
           this.namesForm.setVisible(false);
           this.scene.start('Title');
+        } else {
+          this.add.text(
+            (config.width / 4), (config.height / 2) + 200,
+            'Your name is required', { fontSize: '32px', fill: '#ffffff' },
+          );
         }
       }
     });
