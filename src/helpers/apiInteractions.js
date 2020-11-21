@@ -10,13 +10,13 @@ export const savePlayerScore = async (playerName, score) => {
   return resultToReturn;
 };
 
-export const sortAndSaveScores = (responseArr) => {
+export const sortScores = (responseArr) => {
   const newFormattedScoresArr = [];
   const { result } = responseArr.data;
 
-  for (let i = 0; i < result.length; i += 1) {
-    newFormattedScoresArr.push([result[i].user, result[i].score]);
-  }
+  result.forEach(curr => {
+    newFormattedScoresArr.push([curr.user, curr.score]);
+  });
 
   newFormattedScoresArr.sort((a, b) => b[1] - a[1]);
   const topTenPlayers = [];
@@ -28,7 +28,7 @@ export const sortAndSaveScores = (responseArr) => {
 
 export const retrievePlayerScore = async () => {
   const resultToReturn = await axios.get(`${baseApiUrl}games/${shooterGamApiKey}/scores/`)
-    .then(res => sortAndSaveScores(res))
+    .then(res => sortScores(res))
     .catch(err => err);
   return resultToReturn;
 };
