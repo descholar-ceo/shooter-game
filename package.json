@@ -59,7 +59,11 @@
     "collectCoverageFrom": [
       "src/*.js",
       "src/**/*.js",
-      "!src/migrations/*.js"
+      "!src/entities/",
+      "!rc/objects/",
+      "!src/config/",
+      "!src/assets/",
+      "!src/scenes/"
     ],
     "coverageDirectory": "coverage",
     "coverageReporters": [
