@@ -9,14 +9,14 @@ export default class OptionsScene extends Phaser.Scene {
   create() {
     this.model = this.sys.game.globals.model;
 
-    this.musicText = this.add.text(300, 10, 'Options', { fontSize: '42px', fill: '#fff' });
+    this.musicText = this.add.text(300, 10, 'Settings', { fontSize: '42px', fill: '#fff' });
     this.musicButton = this.add.image(200, 80, 'checkBox');
     this.musicText = this.add.text(250, 70, 'Music Enabled', { fontSize: '24px', fill: '#fff' });
 
     this.soundButton = this.add.image(200, 150, 'checkBox');
     this.soundText = this.add.text(250, 140, 'Sound Enabled', { fontSize: '24px', fill: '#fff' });
 
-    this.helpText = this.add.text(300, 190, 'How to play?', { fontSize: '42px', fill: '#fff' });
+    this.helpText = this.add.text(300, 190, 'Instructions', { fontSize: '42px', fill: '#fff' });
     this.add.text(250, 250, 'Use Upper arrow key to move up', { fontSize: '24px', fill: '#fff' });
     this.add.text(250, 310, 'Use Down arrow key to move down', { fontSize: '24px', fill: '#fff' });
     this.add.text(250, 370, 'Use Right arrow key to right up', { fontSize: '24px', fill: '#fff' });
