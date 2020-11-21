@@ -14,8 +14,8 @@ export default class LeaderboardScene extends Phaser.Scene {
 
   create() {
     this.titleText = this.add.text(
-      (config.width / 8), (config.height / 2) - 200,
-      '10 first players', { fontSize: '42px', fill: '#ffffff' },
+      (config.width / 4), (config.height / 2) - 200,
+      'Top 10 players', { fontSize: '42px', fill: '#ffffff' },
     );
   }
 }

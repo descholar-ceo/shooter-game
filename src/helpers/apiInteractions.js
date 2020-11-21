@@ -10,20 +10,20 @@ export const savePlayerScore = async (playerName, score) => {
 };
 
 export const sortAndSaveScores = (responseArr) => {
-  const sortable = [];
+  const newFormattedScoresArr = [];
   const { result } = responseArr.data;
 
   for (let i = 0; i < result.length; i += 1) {
-    sortable.push([result[i].user, result[i].score]);
+    newFormattedScoresArr.push([result[i].user, result[i].score]);
   }
 
-  sortable.sort((a, b) => b[1] - a[1]);
-  const firstTen = [];
+  newFormattedScoresArr.sort((a, b) => b[1] - a[1]);
+  const topTenPlayers = [];
   for (let i = 0; i < 10; i += 1) {
-    firstTen.push(sortable[i]);
+    topTenPlayers.push(newFormattedScoresArr[i]);
   }
-  localStorage.setItem('savedScores', JSON.stringify(firstTen));
-  return firstTen;
+  localStorage.setItem('topTenPlayers', JSON.stringify(topTenPlayers));
+  return topTenPlayers;
 };
 
 export const retrievePlayerScore = async () => {
