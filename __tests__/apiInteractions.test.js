@@ -1,4 +1,4 @@
-import { savePlayerScore, sortAndSaveScores, retrievePlayerScore } from '../src/helpers/apiInteractions';
+import { savePlayerScore, sortScores, retrievePlayerScore } from '../src/helpers/apiInteractions';
 
 describe('Test apiInteractions', () => {
   it('Will saveScore to the leaderboardAPI', async (done) => {
@@ -11,6 +11,11 @@ describe('Test apiInteractions', () => {
     const res = await savePlayerScore('test');
     expect(res).toHaveProperty('message');
     expect(res.message).toEqual('You need to provide a valid score for the leaderboard');
+    done();
+  });
+  it('Will retrieve players from the leaderboardAPI', async (done) => {
+    const res = await retrievePlayerScore();
+    expect(res.length).toEqual(10);
     done();
   });
 });
