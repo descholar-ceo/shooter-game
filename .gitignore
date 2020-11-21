@@ -16,3 +16,6 @@ dist/
 
 # environment
 .env
+
+# test
+coverage
