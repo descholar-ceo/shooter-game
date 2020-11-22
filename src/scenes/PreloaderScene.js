@@ -4,8 +4,6 @@ import blueButton2 from '../assets/blue_button03.png';
 import box from '../assets/grey_box.png';
 import checkBox from '../assets/blue_boxCheckmark.png';
 import bgMusic from '../assets/TownTheme.mp3';
-import sprBg0 from '../assets/sprBg0.png';
-import sprBg1 from '../assets/sprBg1.png';
 import sprExplosion from '../assets/sprExplosion.png';
 import sprEnemy0 from '../assets/sprEnemy0.png';
 import sprEnemy1 from '../assets/sprEnemy1.png';
@@ -13,9 +11,7 @@ import sprEnemy2 from '../assets/sprEnemy2.png';
 import sprLaserEnemy0 from '../assets/sprLaserEnemy0.png';
 import sprLaserPlayer from '../assets/sprLaserPlayer.png';
 import sprPlayer from '../assets/sprPlayer.png';
-import sndLaser from '../assets/sndLaser.wav';
 import sndExplode0 from '../assets/sndExplode0.wav';
-import sndExplode1 from '../assets/sndExplode1.wav';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -97,8 +93,6 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('box', box);
     this.load.image('checkBox', checkBox);
     this.load.audio('bgMusic', bgMusic);
-    this.load.image('sprBg0', sprBg0);
-    this.load.image('sprBg1', sprBg1);
     this.load.spritesheet('sprExplosion', sprExplosion, { frameWidth: 32, frameHeight: 32 });
     this.load.spritesheet('sprEnemy0', sprEnemy0, { frameWidth: 16, frameHeight: 16 });
     this.load.image('sprEnemy1', sprEnemy1);
@@ -107,8 +101,6 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('sprLaserPlayer', sprLaserPlayer);
     this.load.spritesheet('sprPlayer', sprPlayer, { frameWidth: 16, frameHeight: 16 });
     this.load.audio('sndExplode0', sndExplode0);
-    this.load.audio('sndExplode1', sndExplode1);
-    this.load.audio('sndLaser', sndLaser);
 
     this.anims.create({
       key: 'sprEnemy0',
