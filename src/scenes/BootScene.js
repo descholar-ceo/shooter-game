@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import companyLogo from '../assets/logo.png';
+import companyLogo from '../assets/old-neza-log.png';
 
 export default class BootScene extends Phaser.Scene {
   constructor() {
@@ -8,11 +8,10 @@ export default class BootScene extends Phaser.Scene {
 
   preload() {
     this.load.image('companyLogo', companyLogo);
+    this.load.html('namesForm', './namesForm.html');
   }
 
   create() {
     this.scene.start('Preloader');
   }
-
-  // update() {}
 }

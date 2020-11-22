@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   devtool: 'eval-source-map',
   module: {
     rules: [
@@ -20,14 +20,19 @@ module.exports = {
         use: 'raw-loader',
       },
       {
-        test: /\.(gif|png|jpe?g|svg|xml|mp3)$/i,
+        test: /\.(gif|png|jpe?g|svg|xml|mp3|wav)$/i,
         use: 'file-loader',
       },
     ],
   },
   plugins: [
     new CleanWebpackPlugin({
-      root: path.resolve(__dirname, '../'),
+      root: path.resolve(__dirname, '/'),
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, './src/assets/html/namesForm.html'), to: path.resolve(__dirname, 'dist') },
+      ],
     }),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),

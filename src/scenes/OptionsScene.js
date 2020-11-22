@@ -6,17 +6,22 @@ export default class OptionsScene extends Phaser.Scene {
     super('Options');
   }
 
-  // preload() {}
-
   create() {
     this.model = this.sys.game.globals.model;
 
-    this.musicText = this.add.text(300, 100, 'Options', { fontSize: '42px', fill: '#fff' });
-    this.musicButton = this.add.image(200, 200, 'checkBox');
-    this.musicText = this.add.text(250, 190, 'Music Enabled', { fontSize: '24px', fill: '#fff' });
+    this.musicText = this.add.text(300, 10, 'Settings', { fontSize: '42px', fill: '#fff' });
+    this.musicButton = this.add.image(200, 80, 'checkBox');
+    this.musicText = this.add.text(250, 70, 'Music Enabled', { fontSize: '24px', fill: '#fff' });
 
-    this.soundButton = this.add.image(200, 300, 'checkBox');
-    this.soundText = this.add.text(250, 290, 'Sound Enabled', { fontSize: '24px', fill: '#fff' });
+    this.soundButton = this.add.image(200, 150, 'checkBox');
+    this.soundText = this.add.text(250, 140, 'Sound Enabled', { fontSize: '24px', fill: '#fff' });
+
+    this.helpText = this.add.text(300, 190, 'Instructions', { fontSize: '42px', fill: '#fff' });
+    this.add.text(250, 250, 'Use Upper arrow key to move up', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 310, 'Use Down arrow key to move down', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 370, 'Use Right arrow key to move right', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 430, 'Use Left arrow key to move left', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 490, 'Use Space key to Shoot', { fontSize: '24px', fill: '#fff' });
 
     this.musicButton.setInteractive();
     this.soundButton.setInteractive();
@@ -31,7 +36,7 @@ export default class OptionsScene extends Phaser.Scene {
       this.updateAudio();
     });
 
-    this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+    this.menuButton = new Button(this, 400, 550, 'blueButton1', 'blueButton2', 'Menu', 'Title');
 
     this.updateAudio();
   }
@@ -55,6 +60,4 @@ export default class OptionsScene extends Phaser.Scene {
       this.soundButton.setTexture('checkBox');
     }
   }
-
-  // update() {}
 }

@@ -1,43 +1,88 @@
 {
-  "name": "phaser3-project-template",
-  "version": "1.1.0",
-  "description": "A Phaser 3 Project Template",
+  "name": "shooter-game",
+  "version": "1.0.0",
+  "description": "An HTML5 game called spaceshooter game",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --config webpack/prod.js ",
-    "dev": "webpack-dev-server --config webpack/base.js --open",
-    "eslint-f": "npx eslint . --fix"
+    "build": "webpack -p --env production",
+    "dev": "webpack-dev-server --open",
+    "eslint-f": "npx eslint . --fix",
+    "test": "jest --testTimeout=10000 --verbose"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/photonstorm/phaser3-project-template.git"
+    "url": "git+https://github.com/descholar-ceo/shooter-game.git"
   },
-  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
-  "license": "MIT",
-  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "author": "Mugirase Emmanuel (descholar) <emmanuellamugi@gmail.com> (http://descholar.netlify.app)",
   "bugs": {
-    "url": "https://github.com/photonstorm/phaser3-project-template/issues"
+    "url": "https://github.com/descholar-ceo/shooter-game/issues"
   },
-  "homepage": "https://github.com/photonstorm/phaser3-project-template#readme",
+  "homepage": "https://github.com/descholar-ceo/shooter-game#readme",
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^3.1.0",
-    "terser-webpack-plugin": "^2.2.1"
-  },
-  "dependencies": {
-    "phaser": "^3.20.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "jest": "^26.6.2",
+    "jest-html-reporters": "^2.1.0",
+    "phaser": "^3.20.1",
+    "supertest": "^6.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/entities/",
+      "/src/objects/",
+      "/src/config/",
+      "/src/assets/",
+      "/src/scenes/"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js",
+      "src/**/*.js",
+      "!src/entities/",
+      "!src/index.js",
+      "!rc/objects/",
+      "!src/config/",
+      "!src/assets/",
+      "!src/scenes/"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "./coverage/html-report",
+          "filename": "report.html",
+          "expand": true
+        }
+      ]
+    ],
+    "collectCoverage": true
   }
 }
