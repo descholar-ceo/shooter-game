@@ -25,7 +25,7 @@ This project is my capstone project at the end of the Microverse Javascript curr
 - A player can enable/disable the background music from game settings
 - A player can enable/disable the sound from game settings
 ## Live demo link
-:point_right: [Play SpaceShooter on netlify](https://descholar-shooter-game.netlify.app/)
+:point_right: [Play SpaceShooter on netlify](https://descholar-shooter-game.netlify.app/) use google chrome for a better experience
 
 ## Running and testing it locally
 
