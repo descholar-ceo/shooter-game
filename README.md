@@ -1,55 +1,87 @@
-# Phaser 3 Webpack Project Template
+# SpaceShooter game
+![Linters](https://github.com/descholar-ceo/shooter-game/workflows/Linters/badge.svg)
+![Test with jest](https://github.com/descholar-ceo/shooter-game/workflows/Test%20with%20jest/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08272227-c1fc-452d-9491-c47f10051b0d/deploy-status)](https://app.netlify.com/sites/descholar-shooter-game/deploys)
+## Project description
+This project is an implementation of a game application that runs in the browser, using Phaser3 technology. Being new to Phaser,  and game development, I built a very easy-to-play game I used to see my friends playing it a few years ago unfortunately I was not interested in games at that time. But this time I enjoyed working on this project and now I can understand how they felt while playing such a game.
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/)
-that includes hot-reloading for development and production-ready builds.
+This project is my capstone project at the end of the Microverse Javascript curriculum. The project's specifications are listed [here](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27).
 
-Loading images via JavaScript module `import` is also supported.
+## Screenshot
+![demo picture](./assets/screenshot.png)
 
-## Requirements
+## Built with
+- HTML5
+- [Phaser 3](https://phaser.io/phaser3)
+- Vanilla Javascript
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+## Features
+- Player can enter his/her name
+- The player can 
+    - move upward, downward, left, and right to avoid enemies.
+    - shooter his/her enemies
+    - die and the game over scene appears when he is shot or collide with his enemy
+- Player's score is increased whenever he/she shoots an enemy
+- A player can enable/disable the background music from game settings
+- A player can enable/disable the sound from game settings
+## Live demo link
+:point_right: [Play SpaceShooter on netlify](https://descholar-shooter-game.netlify.app/)
 
-## Available Commands
+## Running and testing it locally
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
-| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+### Prerequisites
+- [NodeJS](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) or just the default npm which comes with [NodeJS](https://nodejs.org/en/)
 
-## Writing Code
+### Setup
+- Run `git clone https://github.com/descholar-ceo/shooter-game && cd shooter-game` to get a copy of source codes on your local computer and to navigate inside the project directory
+- Run `yarn` to install all needed dependencies
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development
-server by running `npm start`.
+### Usage
+- Run `yarn dev` to run this app in development environment
+- Run `yarn build` for build production ready project
+
+### Tests
+- Run `yarn test`
+
+### Instructions for the game
+    - Use Upper arrow key from your keyboard to move upward
+    - Use Down arrow key from your keyboard to move downward
+    - Use Right arrow key from your keyboard to right up
+    - Use Down arrow key from your keyboard to move down
+    - Use Space  key from your keyboard to Shoot
+    - The player must avoid meeting any enemies and being shot in order to stay alive.
+
+## Contributions
+
+There are two ways of contributing to this project:
+
+1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/shooter-game/issues), if that problem you met is not in already opened issues then open a new issue by clicking on `new issue` button.
+
+2.  If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
+    1.  Fork this repository
+    1.  Clone it on your local computer by running `git clone https://github.com/your-username/shooter-game.git` __Replace *your username* with the username you use on github__
+    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1.  Create a separate branch off the *master branch*,
+    1.  Write your codes which fix the issue you found
+    1.  Commit and push the branch you created
+    1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/descholar-ceo/shooter-game)
+
+## Author
+
+👤 **Mugirase Emmanuel**
+
+- Github: [@descholar-ceo](https://github.com/descholar-ceo)
+- Twitter: [@descholar3](https://twitter.com/descholar3)
+- Linkedin: [MUGIRASE Emmanuel](https://www.linkedin.com/in/mugirase-emmanuel)
 
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder
-and webpack will automatically recompile and reload your server (available at `http://localhost:8080`
-by default).
+## Show your support
 
-## Customizing Template
+Give a ⭐️ if you like this project!
 
-### Babel
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you
-want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently
-targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
-
-  ```
-  "browsers": [
-    ">0.25%",
-    "not ie 11",
-    "not op_mini all"
-  ]
-  ```
-
-### Webpack
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can
-modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create
-new configuration files and target them in specific npm tasks inside of `package.json'.
-
-## Deploying Code
-After you run the `npm run build` command, your code will be built into a single bundle located at 
-`dist/bundle.min.js` along with any other assets you project depended. 
-
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), 
-you should be able to open `http://mycoolserver.com/index.html` and play your game.
+## Acknowledgment
+- [Microverse](https://www.microvese.org)
+- [Webpack](https://webpack.js.org/)
+- [Phaser3](https://phaser.io/phaser3)
+- [OpenGameArt](https://opengameart.org/)
