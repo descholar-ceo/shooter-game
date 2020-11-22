@@ -3,7 +3,7 @@
 ![Test with jest](https://github.com/descholar-ceo/shooter-game/workflows/Test%20with%20jest/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/08272227-c1fc-452d-9491-c47f10051b0d/deploy-status)](https://app.netlify.com/sites/descholar-shooter-game/deploys)
 ## Project description
-This project is an implementation of an HTML5 game that runs in the browser, using Phaser3 technology. Being new to Phaser,  and game development, I built a very easy-to-play game I used to see my friends playing it a few years ago unfortunately I was not interested in games at that time. But this time I enjoyed working on this project and now I can understand how they felt while playing such a game.
+This project is an implementation of an HTML5 game that runs in the browser, using Phaser3 technology. Being new to Phaser and game development, I built a very easy-to-play game (Use arrow keys and space key only). I used to see my friends playing it a few years ago. Unfortunately, I was not interested in games at that time. But this time, I enjoyed working on this project. And now I understand how they felt while playing such a game.
 
 This project is my capstone project at the end of the Microverse Javascript curriculum. The project's specifications are listed [here](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27).
 
