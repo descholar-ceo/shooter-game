@@ -47,8 +47,8 @@ This project is my capstone project at the end of the Microverse Javascript curr
 ### Instructions for the game
     - Use the Upper arrow key from your keyboard to move upward
     - Use the Down arrow key from your keyboard to move downward
-    - Use the Right arrow key from your keyboard to right up
-    - Use the Down arrow key from your keyboard to move down
+    - Use the Right arrow key from your keyboard to move right up
+    - Use the Left arrow key from your keyboard to move left
     - Use the Space  key from your keyboard to Shoot
     - The player must avoid meeting any enemies and being shot to stay alive.
 

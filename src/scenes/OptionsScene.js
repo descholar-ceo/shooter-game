@@ -19,8 +19,8 @@ export default class OptionsScene extends Phaser.Scene {
     this.helpText = this.add.text(300, 190, 'Instructions', { fontSize: '42px', fill: '#fff' });
     this.add.text(250, 250, 'Use Upper arrow key to move up', { fontSize: '24px', fill: '#fff' });
     this.add.text(250, 310, 'Use Down arrow key to move down', { fontSize: '24px', fill: '#fff' });
-    this.add.text(250, 370, 'Use Right arrow key to right up', { fontSize: '24px', fill: '#fff' });
-    this.add.text(250, 430, 'Use Down arrow key to move down', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 370, 'Use Right arrow key to move right', { fontSize: '24px', fill: '#fff' });
+    this.add.text(250, 430, 'Use Left arrow key to move left', { fontSize: '24px', fill: '#fff' });
     this.add.text(250, 490, 'Use Space key to Shoot', { fontSize: '24px', fill: '#fff' });
 
     this.musicButton.setInteractive();
