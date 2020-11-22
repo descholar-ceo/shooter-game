@@ -8,7 +8,7 @@ This project is an implementation of a game application that runs in the browser
 This project is my capstone project at the end of the Microverse Javascript curriculum. The project's specifications are listed [here](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27).
 
 ## Screenshot
-![demo picture](./assets/screenshot.png)
+![](./src/assets/shootergame-screenshot.png)
 
 ## Built with
 - HTML5
