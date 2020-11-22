@@ -1,7 +1,7 @@
 {
-  "name": "phaser3-project-template",
-  "version": "1.1.0",
-  "description": "A Phaser 3 Project Template",
+  "name": "shooter-game",
+  "version": "1.0.0",
+  "description": "An HTML5 game called spaceshooter game",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --config webpack/production.js ",
@@ -11,15 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/photonstorm/phaser3-project-template.git"
+    "url": "git+https://github.com/descholar-ceo/shooter-game.git"
   },
-  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
-  "license": "MIT",
-  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "author": "Mugirase Emmanuel (descholar) <emmanuellamugi@gmail.com> (http://descholar.netlify.app)",
   "bugs": {
-    "url": "https://github.com/photonstorm/phaser3-project-template/issues"
+    "url": "https://github.com/descholar-ceo/shooter-game/issues"
   },
-  "homepage": "https://github.com/photonstorm/phaser3-project-template#readme",
+  "homepage": "https://github.com/descholar-ceo/shooter-game#readme",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.12.7",
