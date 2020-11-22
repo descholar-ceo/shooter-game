@@ -19,7 +19,7 @@ This project is my capstone project at the end of the Microverse Javascript curr
 - Player can enter his/her name
 - The player can 
     - move upward, downward, left, and right to avoid enemies.
-    - shooter his/her enemies
+    - shoot his/her enemies
     - die and the game over scene appears when he is shot or collide with his enemy
 - Player's score is increased whenever he/she shoots an enemy
 - A player can enable/disable the background music from game settings
@@ -39,30 +39,30 @@ This project is my capstone project at the end of the Microverse Javascript curr
 
 ### Usage
 - Run `yarn dev` to run this app in development environment
-- Run `yarn build` for build production ready project
+- Run `yarn build` for build a production ready project
 
 ### Tests
 - Run `yarn test`
 
 ### Instructions for the game
-    - Use Upper arrow key from your keyboard to move upward
-    - Use Down arrow key from your keyboard to move downward
-    - Use Right arrow key from your keyboard to right up
-    - Use Down arrow key from your keyboard to move down
-    - Use Space  key from your keyboard to Shoot
-    - The player must avoid meeting any enemies and being shot in order to stay alive.
+    - Use the Upper arrow key from your keyboard to move upward
+    - Use the Down arrow key from your keyboard to move downward
+    - Use the Right arrow key from your keyboard to right up
+    - Use the Down arrow key from your keyboard to move down
+    - Use the Space  key from your keyboard to Shoot
+    - The player must avoid meeting any enemies and being shot to stay alive.
 
 ## Contributions
 
 There are two ways of contributing to this project:
 
-1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/shooter-game/issues), if that problem you met is not in already opened issues then open a new issue by clicking on `new issue` button.
+1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/shooter-game/issues), if that problem you met is not in already opened issues then open a new issue by clicking on the `new issue` button.
 
 2.  If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
     1.  Fork this repository
     1.  Clone it on your local computer by running `git clone https://github.com/your-username/shooter-game.git` __Replace *your username* with the username you use on github__
     1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
-    1.  Create a separate branch off the *master branch*,
+    1.  Create a separate branch from the *master branch*,
     1.  Write your codes which fix the issue you found
     1.  Commit and push the branch you created
     1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/descholar-ceo/shooter-game)
