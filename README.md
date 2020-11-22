@@ -16,17 +16,16 @@ This project is my capstone project at the end of the Microverse Javascript curr
 - Vanilla Javascript
 
 ## Features
-- Player can enter his/her name
 - The player can 
     - move upward, downward, left, and right to avoid enemies.
     - shoot his/her enemies
-    - die and the game over scene appears when he is shot or collide with his enemy
+    - die if he gets shot or collides with his enemy, then the game over scene appears
 - Player's score is increased whenever he/she shoots an enemy
 - A player can enable/disable the background music from game settings
 - A player can enable/disable the sound from game settings
 ## Live demo link
-:point_right: [Play SpaceShooter on netlify](https://descholar-shooter-game.netlify.app/) use google chrome for a better experience
-
+:point_right: Play it [here](https://descholar-shooter-game.netlify.app/) it runs well in google chrome
+:point_right: Watch [Video presentation here](https://www.loom.com/share/61b770d5080b472da500429fedc573b1)
 ## Running and testing it locally
 
 ### Prerequisites
@@ -38,8 +37,8 @@ This project is my capstone project at the end of the Microverse Javascript curr
 - Run `yarn` to install all needed dependencies
 
 ### Usage
-- Run `yarn dev` to run this app in development environment
-- Run `yarn build` for build a production ready project
+- Run `yarn dev` to run this app in the development environment
+- Run `yarn build` to build a production-ready project
 
 ### Tests
 - Run `yarn test`
