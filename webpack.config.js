@@ -28,11 +28,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-      root: path.resolve(__dirname, '../'),
+      root: path.resolve(__dirname, '/'),
     }),
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, '../src/assets/html/namesForm.html'), to: path.resolve(__dirname, '../dist') },
+        { from: path.resolve(__dirname, './src/assets/html/namesForm.html'), to: path.resolve(__dirname, 'dist') },
       ],
     }),
     new webpack.DefinePlugin({
